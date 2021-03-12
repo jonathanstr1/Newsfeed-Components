@@ -86,6 +86,13 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'HELP ME',
+    date: 'Jun 6, 1966',
+    firstParagraph: `Paragraph 1`,
+    secondParagraph: `Paragraph 2`,
+    thirdParagraph: `Paragraph 3`
   }
 ];
 
@@ -145,12 +152,12 @@ function articleMaker(article) {
   newArtDiv.appendChild(newArtP3);
   newArtDiv.appendChild(newArtP4);
   newArtDiv.appendChild(newSpan);
-  
+  // document.querySelector(".expandButton").addEventListener('click', );
 
   return newArtDiv;
 }
 
-console.log(articleMaker(data[0]));
+// console.log(articleMaker(data[0]));
 
 data.forEach((dataObject) => {
   const newArt = articleMaker(dataObject);
