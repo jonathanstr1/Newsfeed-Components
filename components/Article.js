@@ -88,7 +88,7 @@ const data = [
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   },
   {
-    title: 'HELP ME',
+    title: 'Bop',
     date: 'Jun 6, 1966',
     firstParagraph: `Paragraph 1`,
     secondParagraph: `Paragraph 2`,

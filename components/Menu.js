@@ -42,6 +42,8 @@ function menuMaker(menu) {
     li.textContent = element;
     ul.appendChild(li);
   });
-  document.querySelector(".menu-button").addEventListener('click', )
+  document.querySelector(".menu-button").addEventListener('click', function(event){
+    document.querySelector(".menu").classList.toggle("menu--open");
+  })
   return menu;
 }
