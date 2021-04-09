@@ -86,6 +86,13 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Bop',
+    date: 'Jun 6, 1966',
+    firstParagraph: `Paragraph 1`,
+    secondParagraph: `Paragraph 2`,
+    thirdParagraph: `Paragraph 3`
   }
 ];
 
@@ -114,3 +121,45 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+
+function articleMaker(article) {
+
+  const newArtDiv = document.createElement('div');
+  newArtDiv.classList.add("article");
+  const newArtH2 = document.createElement('h2');
+  newArtH2.textContent = article["title"];
+
+  const newArtP1 = document.createElement('p');
+  newArtP1.classList.add("date");
+  newArtP1.textContent = article.date;
+
+  const newArtP2 = document.createElement('p');
+  newArtP2.textContent = article.firstParagraph;
+
+  const newArtP3 = document.createElement('p');
+  newArtP3.textContent = article.secondParagraph;
+
+  const newArtP4 = document.createElement('p');
+  newArtP4.textContent = article.secondParagraph;
+
+  const newSpan = document.createElement('span');
+  newSpan.classList.add("expandButton");
+  newSpan.textContent = "+";
+
+  newArtDiv.appendChild(newArtH2);
+  newArtDiv.appendChild(newArtP1);
+  newArtDiv.appendChild(newArtP2);
+  newArtDiv.appendChild(newArtP3);
+  newArtDiv.appendChild(newArtP4);
+  newArtDiv.appendChild(newSpan);
+  // document.querySelector(".expandButton").addEventListener('click', );
+
+  return newArtDiv;
+}
+
+// console.log(articleMaker(data[0]));
+
+data.forEach((dataObject) => {
+  const newArt = articleMaker(dataObject);
+  document.querySelector(".articles").appendChild(newArt);
+});
